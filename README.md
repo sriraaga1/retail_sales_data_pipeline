@@ -44,19 +44,20 @@ It covers:
 ## 🧾 Folder Structure  
 
 retail_sales_data_pipeline/
+│
 ├── data/
-│   ├── retail_sales.csv
-│   ├── cleaned_sales.csv
-│   └── cleaned_sales.parquet
+│ ├── retail_sales.csv
+│ ├── cleaned_sales.csv
+│ └── cleaned_sales.parquet
 │
 ├── charts/
-│   ├── revenue_by_category.png
-│   ├── monthly_revenue_by_year.png
-│   └── top_items_by_revenue.png
+│ ├── revenue_by_category.png
+│ ├── monthly_revenue_by_year.png
+│ └── top_items_by_revenue.png
 │
 ├── duckdb_outputs/
-│   ├── top_categories.csv
-│   └── monthly_revenue.csv
+│ ├── top_categories.csv
+│ └── monthly_revenue.csv
 │
 ├── extract.py
 ├── clean_transform.py
@@ -69,27 +70,31 @@ retail_sales_data_pipeline/
 ├── .gitignore
 └── README.md
 
+---
 
 ---
 
-## 🚀 How to Run  
+## 🚀 How to Run
 
-🧱 1. Setup Environment  
+### 🧩 Step 1 — Setup Environment
 ```bash
 # Create virtual environment
 python -m venv .venv
-source .venv/bin/activate          # (Windows: .venv\Scripts\activate)
+source .venv/bin/activate      # (Windows: .venv\Scripts\activate)
 
 # Install dependencies
 pip install -r requirements.txt
 
-📥 2. Run ETL Pipeline
+⚙️ Step 2 — Run ETL Pipeline
+
 python extract.py
 python clean_transform.py
-python validate.py                 # ✅ should print "Data validation passed"
+python validate.py             # ✅ should print "Data validation passed"
 python load_to_sqlite.py
 python make_charts.py
 python duckdb_queries.py
+
+
 
 📊 3. Outputs
 | Step         | Output                  | Location          |
@@ -119,6 +124,7 @@ python duckdb_queries.py
 
 
 🧰 Skills Demonstrated
+
 Python for Data Engineering
 Pandas for Cleaning & Transformation
 SQL + SQLite for Structured Data Storage
